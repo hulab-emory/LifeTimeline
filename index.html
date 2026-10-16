@@ -1,0 +1,997 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-variant":"#e0e3df","surface-container":"#ecefea","secondary-fixed-dim":"#c6c0f7","on-surface":"#191c1a","inverse-on-surface":"#eff2ed","on-secondary-fixed-variant":"#45416f","on-error-container":"#93000a","secondary-fixed":"#e4dfff","primary-fixed":"#c9ead5","background":"#f7faf5","primary-container":"#4d6b5a","surface-tint":"#476554","tertiary-fixed-dim":"#ffb4a1","on-secondary-fixed":"#1a1541","secondary":"#5d5989","surface":"#f7faf5","on-background":"#191c1a","surface-bright":"#f7faf5","on-tertiary":"#ffffff","tertiary-fixed":"#ffdbd2","tertiary":"#83331e","inverse-primary":"#adceba","surface-container-low":"#f1f4f0","tertiary-container":"#a24a33","surface-container-high":"#e6e9e4","on-tertiary-container":"#ffdad1","on-surface-variant":"#424844","on-primary-container":"#c9ead5","surface-container-highest":"#e0e3df","error":"#ba1a1a","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-container":"#ccc6fd","on-secondary-container":"#555180","on-tertiary-fixed":"#3c0800","on-primary-fixed":"#032014","primary":"#355343","primary-fixed-dim":"#adceba","on-secondary":"#ffffff","inverse-surface":"#2d312e","on-tertiary-fixed-variant":"#7c2e19","on-error":"#ffffff","on-primary-fixed-variant":"#304d3d","outline":"#727973","surface-dim":"#d8dbd6","outline-variant":"#c2c8c2","on-primary":"#ffffff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1rem","space-xl":"2rem","space-lg":"1.5rem","margin":"1.25rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]},"fontSize":{"headline-sm":["17px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"600"}],"display-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["15px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["17px",{"lineHeight":"24px","letterSpacing":"-0.003em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"display":["34px",{"lineHeight":"41px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<!-- Grant & IRB Scientific Header Banner -->
+<div class="bg-surface-container-high border-b border-outline-variant/30 text-on-surface-variant py-2 px-6 text-[12px] font-label-sm">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3"><div class="flex flex-wrap items-center gap-2"><span class="inline-flex items-center gap-1 font-semibold text-primary"><span class="material-symbols-outlined text-[15px]">account_balance</span> Emory University&nbsp;</span><span class="hidden sm:inline text-outline-variant">•</span><span class="inline-flex items-center gap-1 text-primary font-medium">Center for Data Science</span></div><div class="flex items-center gap-4"><span class="text-outline-variant hidden sm:inline">•</span><span class="inline-flex items-center gap-1 text-primary font-medium"><span class="material-symbols-outlined text-[14px]">verified</span> 42 U.S.C. § 241(d) Shielded</span></div></div>
+</div>
+<header class="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(45,49,46,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[20px]">eco</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight leading-none">LifeTimeline Study</span></div></div><nav class="hidden lg:flex items-center gap-7"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#scientific-problem">Research</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#capture-domains">Domains &amp; Flow</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#coordinator-portal">Coordinator Hub</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#participant-compensation">Compensation</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="#privacy-safeguards">Privacy</a></nav><div class="flex items-center gap-4"><a class="hidden sm:inline-flex items-center justify-center h-11 px-6 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-all shadow-[0_2px_8px_rgba(45,49,46,0.06)]" href="#eligibility">Check Eligibility</a></div></div></header>
+<main class="w-full bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION: Specific Grant Framing -->
+<section class="relative w-full overflow-hidden bg-surface py-12 md:py-20 lg:py-22">
+<div class="pointer-events-none absolute -top-40 -right-40 w-[550px] h-[550px] rounded-full bg-primary-fixed/20 blur-3xl opacity-70"></div>
+<div class="pointer-events-none absolute top-1/2 -left-48 w-[480px] h-[480px] rounded-full bg-secondary-fixed/25 blur-3xl opacity-60"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column: Copy & Value Proposition -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Grant & IRB Badge -->
+<div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high w-fit shadow-sm"><span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide">2026 Lauren F. Collins Emerging Research Pilot (ERP) Award | Emory University &amp; STAR Study Site</span></div>
+<!-- Specific Proposal Title Framing -->
+<h1 class="font-display text-display text-on-surface tracking-tight leading-[1.14]">
+  A Low-Burden Mobile Event Timeline for Longitudinal Capture of <span class="text-primary italic font-normal">Symptoms, Substance Use, and HIV-Related Stigma</span> Among Reproductive-Age Women
+</h1>
+<!-- Research Problem Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+  Evaluating a compassionate, in-the-moment data capture methodology designed to eliminate questionnaire fatigue, painful recall burden, and survey fatigue—capturing lived experiences in under 60 seconds with zero-penalty breaks.
+</p>
+<!-- Action CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-3 px-8 h-14 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.98]" href="#eligibility">
+<span class="">Check Study Eligibility (Ages 18–45)</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-7 h-14 rounded-full bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-variant transition-all duration-200" href="#scientific-problem">
+  Explore Pilot Methodology
+</a>
+</div>
+<!-- Regulatory & Participant Trust Markers -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 mt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-snug">NIH Certificate of Confidentiality</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">lock</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Private &amp; Anonymous by Design</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">spa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Trauma-Informed &amp; Non-Coercive</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-snug">Earn Up to $150 via gift-card</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Mobile Interface Preview -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-[390px] rounded-[36px] bg-surface-container-lowest p-5 shadow-xl border border-outline-variant/30 transition-all duration-300">
+<!-- Mobile App Header -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[16px]">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">LifeTimeline</span>
+<span class="text-[9px] text-on-surface-variant font-medium">Pilot Study Participant #W402</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">shield_person</span>
+<span class="">Interview Cloaked</span>
+</div>
+</div>
+<!-- Milestone Progress Card -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-2.5 mb-3.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Milestone 4: 20 Event Logs</span>
+<span class="font-label-md text-label-md text-primary font-bold">18 / 20 Complete</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 90%;"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">stars</span>
+<span class="">2 brief logs from unlocking $25 milestone e-card</span>
+</p>
+</div>
+<!-- In-the-moment Log: HIV-Related Clinical Encounter -->
+<div class="p-3.5 rounded-2xl bg-primary-fixed/25 border border-primary/30 mb-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Event Log: Clinical Interaction</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-[10px] font-semibold">30s Event Tap</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-snug">
+  Encountered provider judgment during reproductive planning check. Tagged: <span class="font-medium text-on-surface">Dismissed concerns • Disclosure stress</span>
+</p>
+<div class="flex items-center justify-between text-[11px] pt-1 border-t border-outline-variant/20">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility_off</span> Shielded from interview
+  </span>
+<span class="text-on-surface-variant">Today • 11:20 AM</span>
+</div>
+</div>
+<!-- Daily Rhythms & Harm Reduction Micro-tile -->
+<div class="p-3.5 rounded-2xl bg-surface-container-low flex items-center justify-between mb-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">medication</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-semibold text-on-surface">Daily Care &amp; Rhythms</span>
+<span class="text-[11px] text-on-surface-variant">ART taken on schedule • Restorative rest</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<!-- Quick Rest Day Option -->
+<div class="p-3 rounded-2xl bg-surface-container flex items-center justify-between text-[12px]">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">bedtime</span>
+<span class="">Having a flare-up? 1-Tap "Resting Today"</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-label-sm font-semibold">100%</span>
+</div>
+<!-- Mobile Bottom Bar -->
+<div class="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-around text-on-surface-variant">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[20px]">timeline</span>
+<span class="font-label-sm text-[10px]">Timeline</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="font-label-sm text-[10px]">Log Event</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px]">wallet</span>
+<span class="font-label-sm text-[10px]">Milestones</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SCIENTIFIC PROBLEM VS NOVEL METHODOLOGY SECTION -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24" id="scientific-problem">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<div class="max-w-3xl flex flex-col gap-3"><span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-bold">Advancing Longitudinal Research</span><h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Beyond Periodic Surveys: Capturing Health Experiences as Life Unfolds</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Traditional surveys provide valuable structured assessments at scheduled intervals. LifeTimeline complements these methods with low-burden, in-the-moment data capture, enabling richer longitudinal insights without forcing participants to spend energy trying to remember past weeks.</p></div>
+<!-- Methodological Comparison Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="p-8 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-5"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-surface-container-high text-on-surface-variant flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">calendar_month</span></div><div><span class="font-label-sm text-[11px] uppercase tracking-wide text-on-surface-variant font-bold">Established Research Approach</span><h3 class="font-headline-sm text-headline-sm text-on-surface">Periodic Retrospective Surveys</h3></div></div><ul class="flex flex-col gap-3.5 text-on-surface-variant font-body-sm text-[14px]"><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Structured Follow-Ups:</strong> Standardized assessments conducted every 6 months to 1 year.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Comprehensive Questionnaires:</strong> Detailed evaluations covering multiple health dimensions.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Retrospective Reporting:</strong> Trying to remember past weeks and experiences between visits, risking memory fatigue.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Researcher-Guided Interviews:</strong> Scheduled interactions support systematic data collection.</span></li></ul></div><div class="p-8 rounded-3xl bg-surface-container-lowest border-2 border-primary/30 shadow-md flex flex-col gap-5 relative"><div class="absolute top-4 right-4"><span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-label-sm font-bold">Tested Protocol</span></div><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[22px]">touch_app</span></div><div><span class="font-label-sm text-[11px] uppercase tracking-wide text-primary font-bold">The LifeTimeline Advancement</span><h3 class="font-headline-sm text-headline-sm text-on-surface">Low-Burden Mobile Event Timeline</h3></div></div><ul class="flex flex-col gap-3.5 text-on-surface-variant font-body-sm text-[14px]"><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>In-The-Moment Capture:</strong> Record health events and experiences as they happen in under 60 seconds.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Minimal Participant Burden:</strong> Quick, flexible interactions that fit naturally into daily life.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Richer Temporal Context:</strong> Captures when events occur, eliminating memory fatigue or forgetting over time.</span></li><li class="flex items-start gap-2.5"><span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span><span class=""><strong>Participant-Controlled Disclosure:</strong> Participants could choose which sensitive experiences can be discussed during follow-ups.</span></li></ul></div></div>
+<!-- Pilot Core Evaluation Metrics Highlight -->
+<div class="p-8 rounded-3xl bg-surface-container-highest/60 flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4"><div class=""><div class="flex items-center gap-2 mb-1"><span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">STAR Consortium Pilot Evaluation Framework</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">8-Month Pilot: Jan 1 – Aug 31, 2027</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface">Scientific Feasibility &amp; Acceptability Endpoints</h3><p class="font-body-sm text-[13px] text-on-surface-variant mt-1">Targeting STAR priority domains: HIV prevention &amp; treatment adherence, Safe &amp; Respectful Care (Reducing Stigma), and low-burden monitoring among reproductive-age women (ages 18–45).</p></div><span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] font-semibold border border-outline-variant/30">Lauren F. Collins STAR ERP Award</span></div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="p-4 rounded-2xl bg-surface-container-lowest flex flex-col gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">check_box</span>
+<span class="font-label-md text-[13px] font-bold text-on-surface">Feasibility</span>
+<span class="text-[12px] text-on-surface-variant">&gt;85% completion rate of micro-events without protocol dropouts.</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest flex flex-col gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">timer</span>
+<span class="font-label-md text-[13px] font-bold text-on-surface">Reduced Burden</span>
+<span class="text-[12px] text-on-surface-variant">Average entry completion time under 45 seconds per day.</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest flex flex-col gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">sentiment_satisfied</span>
+<span class="font-label-md text-[13px] font-bold text-on-surface">High Acceptability</span>
+<span class="text-[12px] text-on-surface-variant">Participant-validated satisfaction with low cognitive and emotional strain.</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest flex flex-col gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">shield</span>
+<span class="font-label-md text-[13px] font-bold text-on-surface">Emotional Safety</span>
+<span class="text-[12px] text-on-surface-variant">Comfort in reporting sensitive behaviors without fear of judgment.</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-lowest flex flex-col gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]">analytics</span>
+<span class="font-label-md text-[13px] font-bold text-on-surface">Data Completeness</span>
+<span class="text-[12px] text-on-surface-variant">Continuous longitudinal observations without large retrospective gaps.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SENSITIVE CAPTURE DOMAINS & INTERACTIVE WIDGET GALLERY -->
+<section class="w-full bg-surface py-16 lg:py-24" id="capture-domains">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-wide font-bold">Evaluated Capture Domains</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+  Interactive micro-entry widgets built for sensitive lived experiences.
+</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+  Explore how the LifeTimeline pilot collects critical longitudinal data across four sensitive areas while protecting participant dignity and autonomy.
+</p>
+</div>
+<!-- Rich Live App Widgets Gallery -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- WIDGET 1: HIV-Related Stigma & Clinic Interactions (Hero Full-Width Card) -->
+<div class="lg:col-span-12 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 border border-outline-variant/30 flex flex-col gap-6 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-tertiary font-bold">Domain 1: Safe &amp; Respectful Care &amp; Clinical Encounters</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-label-sm font-semibold">Trauma-Informed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Capturing Healthcare Stigma, Disclosure Stress &amp; Clinic Microaggressions</h3>
+</div>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[12px] self-start sm:self-center">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span>
+<span class="">Interview Cloak Active</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<div class="lg:col-span-5 flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Stigma Context &amp; Setting:</span>
+<div class="flex flex-col gap-2.5">
+<div class="p-3.5 rounded-2xl bg-primary-fixed/30 border border-primary/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">local_hospital</span>
+<span class="font-label-md text-[13px] font-semibold text-primary">Reproductive Care / OB-GYN Encounter</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Felt judgment or unsolicited assumptions regarding pregnancy, birth control, or motherhood.</p>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container border border-transparent transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">prescriptions</span>
+<span class="font-label-md text-[13px] font-semibold text-on-surface">Pharmacy &amp; ART Pickup</span>
+</div>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Felt discrete privacy boundaries crossed or disclosure anxiety in public waiting spaces.</p>
+</div>
+<div class="p-3.5 rounded-2xl bg-surface-container-low hover:bg-surface-container border border-transparent transition-colors flex flex-col gap-1 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">diversity_1</span>
+<span class="font-label-md text-[13px] font-semibold text-on-surface">Social &amp; Family Interaction</span>
+</div>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Felt silenced, fearful of status disclosure, or experienced subtle rejection.</p>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 pt-1">
+<span class="font-label-sm text-[11px] uppercase tracking-wide text-on-surface-variant font-semibold">Immediate Reaction Tags:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Left early
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check</span> Internalized shame
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">
+          Delayed next appointment
+        </span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="p-5 rounded-2xl bg-tertiary-fixed/20 border border-tertiary-container/30 flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">shield_locked</span>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Interview Cloak (Trauma-Informed Recall Protection)</h4>
+</div>
+<!-- Active Switch Toggle -->
+<div class="w-12 h-6 rounded-full bg-tertiary flex items-center justify-end px-1 shadow-inner cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-white shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[10px]">check</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+<strong>You never have to re-live distressing experiences.</strong> When you toggle this cloak on an entry, qualitative research interviewers are strictly barred by study protocol from probing into it. The study counts your longitudinal contribution without demanding painful elaboration.
+      </p>
+<div class="p-3 rounded-xl bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-between text-[11px]">
+<span class="text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">verified</span> Encrypted &amp; Masked from Interviewers
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold text-[10px]">Protected Boundary</span>
+</div>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[12px] text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">touch_app</span> One-Tap Event Confirmation
+        </span>
+<span class="text-[11px] text-on-surface-variant font-label-sm">&lt; 30 seconds</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+        "Experienced medical provider stigma or disclosure distress today" — recorded instantly. Advance your compensation tier with zero forced typing or clinical re-traumatization.
+      </p>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-outline-variant/20">
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span class="">Private &amp; Anonymous by Design</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[15px]">contact_support</span>
+<a class="underline hover:text-on-surface" href="#privacy-safeguards">Participant Rights Protocol</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- WIDGET 2: Fluctuating Symptoms & Medication/Care Rhythms -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">health_and_safety</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">Domain 2: Symptoms &amp; Care</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Fluctuating Symptoms &amp; ART Rhythms</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px]">30 sec log</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-2">
+  Capturing physical fatigue, neuropathic comfort, ART adherence ease, and hormonal transitions in the moment.
+</p>
+<!-- Archetype Selector -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Overall Bodily State:</span>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-2">
+<button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">spa</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Steady</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-primary text-on-primary shadow-sm transition-all text-center gap-1 relative" type="button">
+<div class="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[9px]">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">battery_2_bar</span>
+<span class="font-label-sm text-[12px] font-bold text-on-primary">Fatigued</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">cyclone</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Nauseous</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Nerve Pain</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2.5 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">bedtime</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Depleted</span>
+</button>
+</div>
+</div>
+<!-- Medication & Reproductive Health Chips -->
+<div class="flex flex-col gap-2 pt-1 border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Care &amp; Reproductive Context:</span>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span> ART taken as scheduled
+    </span>
+<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span> Menstrual cycle flare
+    </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+      Missed dose (zero guilt)
+    </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+      GI upset / food intolerance
+    </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+      Hormonal shifts
+    </span>
+</div>
+</div>
+<!-- Non-punitive missed dose card -->
+<div class="p-3.5 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex items-center justify-between text-[12px]">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="">Missed a medication dose? Reporting honestly helps science without affecting compensation.</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]">check</span>
+</div>
+</div>
+<!-- WIDGET 3: Discrete Harm Reduction & Substance Use (Stigma-Free) -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 border border-outline-variant/30 flex flex-col gap-6 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">healing</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Domain 3: Harm Reduction &amp; Substance Use</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stigma-Free Coping &amp; Relief</h3>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+<span class="">Federally Shielded</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant -mt-2">
+  Documenting authentic coping aids and harm reduction practices with absolute zero moralizing or clinical reporting.
+</p>
+<!-- Substance & Harm Reduction Checklist -->
+<div class="flex flex-col gap-2">
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-semibold text-on-surface">Cannabinoids / Medicinal Cannabis</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_box</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Used for neuropathic pain relief, appetite stimulation, anxiety decompression</span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-semibold text-on-surface">Prescription Sedatives / Stimulants</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">check_box_outline_blank</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Sleep aids, pain management, ADHD or mental wellness support</span>
+</div>
+<div class="p-3 rounded-2xl bg-secondary-fixed/20 border border-secondary/25 flex flex-col gap-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-semibold text-on-surface">Harm Reduction &amp; Protective Safeguards</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] font-bold">Logged</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Carrying Naloxone/Narcan, testing supplies, hydrated, safe-use partner</span>
+</div>
+</div>
+<!-- Primary Motive Chips -->
+<div class="flex flex-col gap-1.5 pt-1 border-t border-outline-variant/20">
+<span class="font-label-sm text-[11px] uppercase tracking-wide text-on-surface font-semibold">Primary Context or Intent:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">Somatic Pain Relief</span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">Stress De-escalation</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">Insomnia Relief</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-[11px]">Social Gathering</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RESEARCH PARTICIPANT COMPENSATION ROADMAP -->
+<section class="w-full bg-surface-container-high/40 py-16 lg:py-24 border-t border-b border-outline-variant/30" id="daily-participant-flow">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-3 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Participant Experience Walkthrough</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-bold">Under 60s Daily Micro-Entry</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          The Daily Participant Flow — Designed with compassion, not clinical rigidity.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Experience the intuitive micro-modules reproductive-age women interact with every day. Every screen prioritizes cognitive ease, trauma-informed agency, non-judgmental tracking, and dignified milestone unlocking.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-end">
+<div class="p-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center gap-2.5 shadow-sm text-[12px]">
+<span class="material-symbols-outlined text-primary text-[20px]">schedule</span>
+<span class="font-medium text-on-surface">Average log: <strong>38 seconds</strong></span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- CARD 1: HOW I'M FEELING (Emotional Energy Archetypes) -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">mood</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">Step 01 • Lived State</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Where is your emotional energy right now?</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">15s quick timer</span>
+</div>
+<!-- Archetype Selector -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Primary Energy Archetypes:</span>
+<span class="text-[11px] text-on-surface-variant">Tap to select</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1 border border-transparent" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">spa</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Grounded</span>
+<span class="text-[10px] text-on-surface-variant">Calm</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1 border border-transparent" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">wb_sunny</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Hopeful</span>
+<span class="text-[10px] text-on-surface-variant">Light</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-primary text-on-primary shadow-sm transition-all text-center gap-1 relative border border-primary" type="button">
+<div class="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[9px]">
+<span class="material-symbols-outlined text-[10px]">check</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">anchor</span>
+<span class="font-label-sm text-[12px] font-bold text-on-primary">Heavy</span>
+<span class="text-[10px] text-primary-fixed">Carrying</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1 border border-transparent" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">air</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Anxious</span>
+<span class="text-[10px] text-on-surface-variant">Restless</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all text-center gap-1 border border-transparent" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">bedtime</span>
+<span class="font-label-sm text-[12px] font-bold text-on-surface">Depleted</span>
+<span class="text-[10px] text-on-surface-variant">Quiet</span>
+</button>
+</div>
+</div>
+<!-- Emotional Resonance Tags -->
+<div class="flex flex-col gap-2 pt-1 border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Emotional Resonance Tags:</span>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span> Tired
+            </span>
+<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span> Exhausted
+            </span>
+<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[12px] font-medium shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span> Brain fog
+            </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+              Grateful
+            </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+              Supported
+            </span>
+<span class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-[12px] hover:bg-surface-variant cursor-pointer transition-colors">
+              Peaceful
+            </span>
+</div>
+</div>
+<!-- Intensity Scale -->
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2.5">
+<div class="flex items-center justify-between text-[12px]">
+<span class="font-semibold text-on-surface">Emotional Intensity Scale</span>
+<span class="text-primary font-bold">Level 3 of 4: Heavy</span>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="h-2 rounded-full bg-primary"></div>
+<div class="h-2 rounded-full bg-primary"></div>
+<div class="h-2 rounded-full bg-primary"></div>
+<div class="h-2 rounded-full bg-surface-container-highest"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant">
+<span class="">Mid-murmur</span>
+<span class="">Manageable</span>
+<span class="font-semibold text-on-surface">Significant weight</span>
+<span class="">Overwhelming</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: DAILY CARE & RHYTHMS -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">self_improvement</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary font-bold">Step 02 • Care Capacity</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">What care practices shaped your day?</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/20 text-on-secondary-fixed font-label-sm text-[11px] font-semibold">Gentle Rhythm</span>
+</div>
+<!-- Care Capacity / Spoon State -->
+<div class="flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Care Capacity &amp; Spoon State:</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container border border-transparent transition-colors flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] font-semibold text-on-surface">Very low spoons</span>
+<span class="text-[11px] text-on-surface-variant">Gentle self-compassion</span>
+</div>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+<div class="p-3 rounded-2xl bg-primary-fixed/30 border border-primary/40 flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] font-semibold text-primary">Basic essentials</span>
+<span class="text-[11px] text-on-surface-variant">Hydrated, vit/med, paused</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container border border-transparent transition-colors flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] font-semibold text-on-surface">Nourished &amp; steady</span>
+<span class="text-[11px] text-on-surface-variant">Grounded rhythms kept</span>
+</div>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container border border-transparent transition-colors flex items-center justify-between cursor-pointer">
+<div class="flex flex-col">
+<span class="font-label-md text-[13px] font-semibold text-on-surface">Full restorative</span>
+<span class="text-[11px] text-on-surface-variant">Expanded self-care time</span>
+</div>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+</div>
+</div>
+<!-- Multi-dimension Care practices -->
+<div class="flex flex-col gap-3 pt-1 border-t border-outline-variant/20 text-[12px]">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Observed Practices:</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<span class="text-[11px] uppercase tracking-wide text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">nightlight</span> Sleep &amp; Rest
+              </span>
+<span class="font-medium text-on-surface">Restful sleep (7–9h)</span>
+<span class="text-[11px] text-on-surface-variant">Lying down in dark room</span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<span class="text-[11px] uppercase tracking-wide text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_cafe</span> Nourishment
+              </span>
+<span class="font-medium text-on-surface">Peppermint herbal tea</span>
+<span class="text-[11px] text-on-surface-variant">Warm cooked meals</span>
+</div>
+<div class="p-3 rounded-2xl bg-surface-container-low flex flex-col gap-1.5">
+<span class="text-[11px] uppercase tracking-wide text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hot_tub</span> Somatic Comfort
+              </span>
+<span class="font-medium text-on-surface">Heating pad / heat pack</span>
+<span class="text-[11px] text-on-surface-variant">Magnesium bath</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 3: NON-PUNITIVE SUBSTANCE USE & COPING -->
+<div class="lg:col-span-12 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-tertiary font-bold">Domain 3: Coping Strategies</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-label-sm font-semibold">Private &amp; Anonymous</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Non-Punitive Space — Substance Use &amp; Harm Reduction Coping</h3>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[12px] font-semibold self-start sm:self-center">
+<span class="material-symbols-outlined text-[14px]">health_and_safety</span>
+<span class="">Zero-Penalty Scientific Disclosure</span>
+</div>
+</div>
+<p class="font-body-sm text-[13px] text-on-surface-variant -mt-2 leading-relaxed">
+          Standard trials penalize or pathologize substance use. In LifeTimeline, documenting authentic relief aids is completely confidential, non-judgmental, and legally shielded under federal law.
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 rounded-2xl bg-primary-fixed/20 border border-primary/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-bold text-on-surface">Cannabinoids / Medicinal Cannabis</span>
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Pain relief, insomnia aid, nausea eases</p>
+<span class="w-fit px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary text-[10px] font-bold">Documented for Somatic Relief</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-semibold text-on-surface">Prescription Controlled Meds</span>
+<span class="w-4 h-4 rounded-full border border-outline"></span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">ADHD stimulants, pain management protocols</p>
+<span class="w-fit px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[10px]">Unselected</span>
+</div>
+<div class="p-4 rounded-2xl bg-secondary-fixed/20 border border-secondary/30 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[13px] font-bold text-on-surface">Harm Reduction &amp; Safeguards</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Carrying Narcan, test strips used, peer support hydration</p>
+<span class="w-fit px-2 py-0.5 rounded-full bg-secondary text-on-secondary text-[10px] font-bold">Protective Action Logged</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-outline-variant/20 text-[12px]">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] uppercase tracking-wide text-on-surface font-semibold">Primary Intentions:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface text-[11px] font-medium">Pain Relief</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface text-[11px] font-medium">Stress De-escalation</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface text-[11px] font-medium">Sleep &amp; Insomnia</span>
+</div>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant text-[11px]">
+<span class="inline-flex items-center gap-1 text-primary font-medium"><span class="material-symbols-outlined text-[15px]">check_circle</span> Felt safe &amp; in control</span>
+<span class="">•</span>
+<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 24/7 confidential peer line linked</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: PARTICIPANT AGENCY GUARD (INTERVIEW CLOAKING) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col gap-5">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">shield_locked</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-tertiary font-bold">Participant Agency Guard</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Protected Boundary Protocol</h3>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-bold">
+<span class="material-symbols-outlined text-[13px]">lock</span> Masked from Staff
+          </div>
+</div>
+<div class="p-4 rounded-2xl bg-tertiary-fixed/20 border border-tertiary-container/30 flex flex-col gap-3">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">visibility_off</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Interview Cloak / Mark as Protected Boundary</span>
+</div>
+<div class="w-12 h-6 rounded-full bg-tertiary flex items-center justify-end px-1 shadow-inner cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-white shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[10px]">check</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+            Private &amp; Anonymous by Design on device. Instructs study coordinators and interviewers not to ask or probe into this entry during qualitative check-ins unless explicitly initiated by you.
+          </p>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex flex-col gap-2 text-[12px]">
+<span class="font-label-sm text-[11px] font-bold uppercase tracking-wider text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]">vpn_key</span> Private Shielded Participant Note (Encrypted):
+          </span>
+<p class="italic text-on-surface-variant bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/20 leading-relaxed">
+            "Resting intensive emotional grief regarding treatment timeline today. Not open to discussing with qualitative interviewers."
+          </p>
+</div>
+</div>
+<!-- CARD 5: MILESTONE COMPENSATION PROGRESS -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-sm border border-outline-variant/30 flex flex-col justify-between gap-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">Instant Study Compensation</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Milestone Progress</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-bold">Milestone 4 of 5</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Milestone 4 (20 Entries)</span>
+<span class="font-label-md text-label-md text-primary font-bold">18 / 20 Completed</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-700" style="width: 90%;"></div>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[15px]">stars</span>
+<span class="">Only 2 logs away from unlocking your next $25 reward!</span>
+</p>
+</div>
+<div class="p-4 rounded-2xl bg-primary-fixed/20 border border-primary/30 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] uppercase tracking-wide text-primary font-bold">Unlock Upon 20th Entry</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">$25.00 e-Gift Card</span>
+<span class="text-[11px] text-on-surface-variant">Via Tremendous (Amazon, Target, Visa, or Grocery)</span>
+</div>
+<span class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-[12px] font-bold">Guaranteed</span>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-between text-[11px]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">verified</span> Zero penalties for skipped days
+          </span>
+<span class="font-medium text-on-surface">5s Rest-day logs count 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RESEARCH COORDINATOR & STUDY TEAM PORTAL -->
+<section class="w-full bg-surface py-16 lg:py-24" id="coordinator-portal"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12"><div class="flex flex-col md:flex-row md:items-end justify-between gap-6"><div class="flex flex-col gap-3 max-w-3xl"><div class="flex flex-wrap items-center gap-2"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Research Coordinator &amp; Study Team Portal</span><span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold">No-Pressure Qualitative Interviews</span></div><h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Transforming Micro-Logs into Meaningful Conversations &amp; Insights</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Study coordinators conduct trauma-informed, deeply contextual monthly interviews anchored to authentic timeline events—eliminating memory fatigue / forgetting over time while strictly honoring participant privacy boundaries.</p></div><div class="flex items-center gap-3 self-start md:self-end"><span class="p-3 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex items-center gap-2 text-[12px] font-medium text-on-surface"><span class="material-symbols-outlined text-primary text-[20px]">psychology</span> Clear Analysis Framework</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"><div class="lg:col-span-5 flex flex-col gap-4"><div class="p-5 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-2"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">timeline</span></div><h4 class="font-label-lg text-label-lg font-bold text-on-surface">1. Anchored Longitudinal Timeline</h4></div><p class="text-[13px] text-on-surface-variant leading-relaxed">Chronological participant micro-logs appear in the coordinator timeline view, providing instant factual anchors rather than forcing participants into trying to remember past weeks from memory.</p></div><div class="p-5 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-2"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">shield_locked</span></div><h4 class="font-label-lg text-label-lg font-bold text-on-surface">2. Trauma-Informed Cloaked Entry Protocol</h4></div><p class="text-[13px] text-on-surface-variant leading-relaxed">Hard boundary enforcement: entries marked with the participant's "Interview Cloak" are locked with automated coordinator scripts ("We respect your private note and won't probe into it"), ensuring ethical compliance.</p></div><div class="p-5 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-2"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">tune</span></div><h4 class="font-label-lg text-label-lg font-bold text-on-surface">3. Relevant Follow-Up Questions &amp; Notes</h4></div><p class="text-[13px] text-on-surface-variant leading-relaxed">Context-aware follow-up questions guide meaningful dialogue (e.g., healthcare dismissal, caregiver strain) alongside live thematic tags (#SafeCare, #CaregiverSupport, #ResilienceStrategy) and instant quote bookmarking.</p></div><div class="p-5 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col gap-2"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">crisis_alert</span></div><h4 class="font-label-lg text-label-lg font-bold text-on-surface">4. Harm Reduction &amp; Crisis Safeguards</h4></div><p class="text-[13px] text-on-surface-variant leading-relaxed">Integrated participant safety nets with 1-click access to study nurse contacts, site community health workers, and confidential 24/7 crisis hotlines (988).</p></div></div><div class="lg:col-span-7 bg-surface-container-lowest rounded-[32px] p-6 sm:p-8 shadow-md border-2 border-primary/20 flex flex-col gap-6"><div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-outline-variant/20"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[22px]">dashboard</span></div><div><div class="flex items-center gap-2"><span class="font-label-sm text-[11px] uppercase tracking-wider text-primary font-bold">Timeline Interview Hub • IRB #2024-819</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">Live Session</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface">Participant #LT-84920 (Month 2 Qualitative Follow-Up)</h3></div></div><div class="flex items-center gap-2 text-[12px] font-semibold text-primary bg-primary-fixed/30 px-3 py-1.5 rounded-full"><span class="material-symbols-outlined text-[16px]">timer</span><span class="">Session: 24m 12s</span></div></div><div class="flex flex-col gap-3"><div class="flex items-center justify-between text-[12px]"><span class="font-semibold text-on-surface">Anchored 30-Day Stream &amp; Follow-Up Prompts:</span><span class="text-on-surface-variant text-[11px]">3 of 28 micro-logs referenced</span></div><div class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col gap-2.5"><div class="flex items-center justify-between"><span class="font-label-sm text-[12px] font-bold text-on-surface flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> Day 14 Event: Dismissed During OB-GYN Check</span><span class="text-[11px] text-on-surface-variant">Logged Jan 14 • 11:20 AM</span></div><p class="text-[12px] text-on-surface-variant leading-snug">"Felt discrete privacy boundaries crossed when asking about fertility &amp; ART interactions."</p><div class="p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/20 flex flex-col gap-1.5"><span class="text-[11px] font-bold uppercase tracking-wider text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">help_center</span> Coordinator Follow-Up Prompt:</span><p class="text-[12px] text-on-surface italic leading-snug">"On Day 14 you noted feeling dismissed during your clinic check. Would you feel comfortable sharing what would have made that conversation feel dignified and supportive?"</p></div></div><div class="p-4 rounded-2xl bg-tertiary-fixed/20 border border-tertiary-container/30 flex flex-col gap-2"><div class="flex items-center justify-between"><div class="flex items-center gap-1.5 text-tertiary font-bold text-[12px]"><span class="material-symbols-outlined text-[16px]">lock</span><span class="">Day 21: Interview Cloak Active (Participant Masked)</span></div><span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary text-[10px] font-bold">Protected Boundary</span></div><p class="text-[12px] text-on-surface-variant leading-snug">Participant marked this event with the Interview Cloak. Automated script displayed:</p><p class="text-[11px] font-medium text-on-tertiary-fixed-variant bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/20 leading-snug">"Protocol Notice: Acknowledge log was received; do not probe or ask details. Preserve participant autonomy."</p></div></div><div class="pt-3 border-t border-outline-variant/20 flex flex-col gap-2"><span class="font-label-sm text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Clear Analysis Framework &amp; Participant Quotes:</span><div class="flex flex-wrap gap-1.5"><span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container text-[11px] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">label</span> #SafeCare</span><span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">label</span> #CaregiverBurden</span><span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-[11px] font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">label</span> #ResilienceStrategy</span><span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface text-[11px] flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">bookmark</span> Direct Quote (00:18:42)</span></div></div><div class="p-3.5 rounded-2xl bg-surface-container-low flex flex-wrap items-center justify-between gap-3 text-[12px]"><div class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">download</span><span class="">STAR Consortium research pipeline (NVivo, Dedoose, CSV)</span></div><span class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container text-[11px] font-semibold">Ready to Export</span></div></div></div></div></section>
+<!-- PARTICIPANT COMPENSATION SECTION -->
+<section class="w-full bg-surface-container-low py-16 lg:py-24" id="participant-compensation">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-3">
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-bold">Labor Dignity in Health Research</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Honoring Lived Wisdom with Instant Compensation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+  Longitudinal study participation is active knowledge contribution. In LifeTimeline, you unlock guaranteed electronic gift cards at cumulative milestone intervals.
+</p>
+</div>
+<!-- 5 Milestone Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Milestone 1 -->
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4 border-l-4 border-primary">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-bold">MILESTONE 1</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">5 Entries</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Complete your initial onboarding check-ins.</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$15.00</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] font-semibold">Instant</span>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">MILESTONE 2</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">10 Entries</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Establish your organic comfort rhythms.</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$15.00</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">e-Card</span>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">MILESTONE 3</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">15 Entries</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mid-study checkpoint and comfort pulse.</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$25.00</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">e-Card</span>
+</div>
+</div>
+<!-- Milestone 4 -->
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">MILESTONE 4</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">20 Entries</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Documenting longitudinal clinic &amp; life cycles.</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$25.00</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px]">e-Card</span>
+</div>
+</div>
+<!-- Final Milestone -->
+<div class="p-6 rounded-3xl bg-primary-container text-on-primary-container shadow-md flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-primary-fixed font-bold">FINAL MILESTONE</span>
+<span class="font-headline-md text-headline-md text-white font-semibold">30 Entries</span>
+<span class="font-body-sm text-body-sm opacity-90 mt-1">Full longitudinal evaluation completion.</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/20">
+<span class="font-headline-sm text-headline-sm text-white font-bold">$70.00</span>
+<span class="px-2 py-0.5 rounded-full bg-surface text-primary font-label-sm text-[11px] font-bold">Total: $150</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRIVACY, SHIELDING & LEGAL SECURITY -->
+<section class="w-full bg-surface py-16 lg:py-24" id="privacy-safeguards"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12"><div class="max-w-3xl flex flex-col gap-3"><span class="font-label-lg text-label-lg text-primary uppercase tracking-wider font-bold">UNCOMPROMISING PARTICIPANT PROTECTION</span><h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Your data cannot be seized, shared, or sold. Period.</h2><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">In an era of digital surveillance, health research requires an absolute iron-clad shield. We deploy dual-layered legal and technical safeguards to keep you safe.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="p-8 rounded-3xl bg-surface-container-low flex flex-col gap-4 border border-outline-variant/20 shadow-sm"><div class="w-12 h-12 rounded-2xl bg-primary-container text-on-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">gavel</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">NIH Certificate of Confidentiality</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Issued by the United States Department of Health &amp; Human Services under 42 U.S.C. § 241(d). Your responses are legally immune from state and federal subpoenas, law enforcement requests, insurance auditors, and civil lawsuits.</p></div><div class="p-8 rounded-3xl bg-surface-container-low flex flex-col gap-4 border border-outline-variant/20 shadow-sm"><div class="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center text-on-secondary"><span class="material-symbols-outlined text-[24px]">enhanced_encryption</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Private &amp; Anonymous by Design</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Personal identifying identifiers (names, phone numbers, payout emails) are physically separated on isolated servers from all observational health entries. Researchers only ever analyze anonymized, non-linkable ID sequences.</p></div><div class="p-8 rounded-3xl bg-surface-container-low flex flex-col gap-4 border border-outline-variant/20 shadow-sm"><div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[24px]">vpn_key</span></div><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Irrevocable Right of Erasure</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">You maintain full bodily and digital ownership. You may pause, redact past entries, export your raw logs, or withdraw completely at any point with a single tap, without forfeiture of any previously earned gift cards.</p></div></div></div></section>
+<!-- ELIGIBILITY CRITERIA & PARTICIPATION ONBOARDING -->
+<section class="w-full bg-surface py-16 lg:py-24" id="eligibility">
+<div class="max-w-5xl mx-auto px-6 lg:px-12">
+<div class="p-8 md:p-14 rounded-[36px] bg-primary text-on-primary shadow-xl flex flex-col gap-8 relative overflow-hidden">
+<div class="pointer-events-none absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-primary-container/40 blur-2xl"></div>
+<div class="flex flex-col gap-3 relative z-10">
+<span class="font-label-lg text-label-lg text-primary-fixed uppercase tracking-wider font-bold">Research Study Enrollment</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary tracking-tight">
+  Join the Research Cohort: Eligibility &amp; Steps
+</h2>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant max-w-2xl leading-relaxed">
+  We are enrolling reproductive-age women (ages 18–45) affected by HIV to test whether this low-burden mobile timeline improves research comfort and longitudinal data quality.
+</p>
+</div>
+<!-- Participant Eligibility Criteria -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10 bg-white/10 p-5 rounded-2xl backdrop-blur-sm text-[13px]">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-white font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">check_circle</span> Who is Eligible:
+    </span>
+<ul class="flex flex-col gap-1 text-on-primary/90 list-disc list-inside">
+<li class="">Women (cisgender and transgender women) ages 18–45</li>
+<li class="">Living with or directly affected by HIV</li>
+<li class="">Access to an iOS or Android smartphone</li>
+<li class="">Residing in the United States</li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-white font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">verified</span> Study Commitments:
+    </span>
+<ul class="flex flex-col gap-1 text-on-primary/90 list-disc list-inside">
+<li class="">Under 60 seconds of optional micro-logs per day</li>
+<li class="">Zero penalties for skipping days or pausing</li>
+<li class="">Optional exit qualitative check-in (fully cloaked)</li>
+<li class="">Earn up to $150 in instant electronic gift cards</li>
+</ul>
+</div>
+</div>
+<!-- 3-Step Process List -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10 pt-1">
+<div class="flex flex-col gap-2 p-5 rounded-2xl bg-white/10 backdrop-blur-sm">
+<span class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-label-sm">1</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-primary">2-Min Screener</span>
+<span class="font-body-sm text-body-sm text-on-primary/80">Complete anonymous digital screener to confirm eligibility.</span>
+</div>
+<div class="flex flex-col gap-2 p-5 rounded-2xl bg-white/10 backdrop-blur-sm">
+<span class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-label-sm">2</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-primary">Download Timeline</span>
+<span class="font-body-sm text-body-sm text-on-primary/80">Receive secure participant link to install the private web app.</span>
+</div>
+<div class="flex flex-col gap-2 p-5 rounded-2xl bg-white/10 backdrop-blur-sm">
+<span class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-label-sm">3</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-primary">First $15 Milestone</span>
+<span class="font-body-sm text-body-sm text-on-primary/80">Complete 5 quick micro-entries to receive your first e-card.</span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="flex flex-col sm:flex-row items-center gap-4 pt-4 relative z-10 border-t border-white/15">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 h-14 rounded-full bg-surface text-primary font-label-lg text-label-lg hover:bg-surface-variant transition-all duration-200 shadow-md font-bold" id="screenerBtn">
+<span class="">Check Eligibility (2 mins)</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2 text-on-primary/80 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px]">mail</span><span class="">Study Coordinator Contact: <a class="underline hover:text-white" href="mailto:emory.study@emory.edu">emory.study@emory.edu</a> / Emory University</span></div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+<!-- ACADEMIC & INSTITUTIONAL FOOTER -->
+<footer class="w-full bg-surface-container-low mt-space-xl pt-space-xl pb-space-lg border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-space-xl">
+<div class="md:col-span-1 flex flex-col gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary text-[18px]">eco</span></div>
+<span class="font-headline-sm text-headline-sm text-primary">LifeTimeline Study</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+  A research investigation evaluating in-the-moment mobile micro-capture to advance trauma-informed, low-burden health science for reproductive-age women affected by HIV.
+</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Participant Hub</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#scientific-problem">Research Purpose</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#capture-domains">Capture Domains</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#participant-compensation">Compensation Roadmap</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#privacy-safeguards">Participant Bill of Rights</a>
+</div>
+<div class="flex flex-col gap-2"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Research &amp; Governance</span><span class="font-body-sm text-body-sm text-on-surface-variant">Emory University</span><span class="font-body-sm text-body-sm text-on-surface-variant">STAR Consortium Study Site</span><span class="font-body-sm text-body-sm text-on-surface-variant">Lauren F. Collins ERP Award 2026</span><span class="font-body-sm text-body-sm text-on-surface-variant">42 U.S.C. § 241(d) Protected</span></div>
+<div class="flex flex-col gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Ethics &amp; Oversight</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Informed Consent Protocol</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Private &amp; Anonymous Architecture</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#">Trauma-Informed Principles</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="mailto:study@lifetimeline.org">Contact Institutional Spokesman</a>
+</div>
+</div>
+<div class="pt-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant border-t border-outline-variant/20"><p class="max-w-3xl text-[12px] leading-relaxed text-on-surface-variant">Study title: <em class="">"A Low-Burden Mobile Event Timeline for Longitudinal Capture of Symptoms, Substance Use, and HIV-Related Stigma Among Reproductive-Age Women Affected by HIV."</em> Supported by the 2026 Lauren F. Collins Emerging Research Pilot (ERP) Award under the STAR Consortium and conducted by Emory University (Project Period: January 1, 2027 – August 31, 2027; $50,000 Direct Support). Participation is entirely voluntary.</p><p class="text-[12px] text-on-surface-variant whitespace-nowrap">© 2026 Emory University, Center for Data Science.</p></div>
+</div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const screenerBtn = document.getElementById('screenerBtn');
+    if (screenerBtn) {
+      screenerBtn.addEventListener('click', () => {
+        alert("Opening LifeTimeline Institutional Screener (IRB Protocol #2024-819)... Welcome to patient-centered, low-burden longitudinal research.");
+      });
+    }
+  });
+</script>
+
+
+</body></html>
